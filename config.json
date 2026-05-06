@@ -1,0 +1,13 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "students.sqlite"
+  },
+  "production": {
+    "username": "your-azure-db-username",
+    "password": "your-azure-db-password",
+    "database": "your-azure-db-name",
+    "host": "your-azure-db-host",
+    "dialect": "mssql"
+  }
+}
