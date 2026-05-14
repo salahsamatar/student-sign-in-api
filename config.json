@@ -1,13 +1,19 @@
 {
   "development": {
     "dialect": "sqlite",
-    "storage": "students.sqlite"
+    "storage": "./students.sqlite"
   },
   "production": {
-    "username": "your-azure-db-username",
-    "password": "your-azure-db-password",
-    "database": "your-azure-db-name",
-    "host": "your-azure-db-host",
-    "dialect": "mssql"
+    "username": "salah",
+    "password": "Projectempros@1",
+    "database": "salahdb2",
+    "host": "newsalahdb.database.windows.net",
+    "dialect": "mssql",
+    "dialectOptions": {
+      "options": {
+        "encrypt": true,
+        "trustServerCertificate": false
+      }
+    }
   }
 }
