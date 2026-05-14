@@ -16,7 +16,7 @@ app.use(express.json())
 // Serve the compiled Vue app's static files (HTML, CSS, JS).
 // When Vue is built (npm run build), the output goes to client/dist.
 // express.static() serves those files when the browser requests them.
-app.use(express.static(path.join(__dirname, 'client', 'dist')))
+// app.use(express.static(path.join(__dirname, 'client', 'dist')))
 
 // ── API Routes ────────────────────────────────────────────────────────────
 // Import and mount the router from routes/api.js.
@@ -28,8 +28,8 @@ app.use('/api', apiRouter)
 // ── Catch-all route ───────────────────────────────────────────────────────
 // For any request that doesn't match an API route, send the Vue app's index.html.
 // This lets Vue Router handle client-side navigation.
-app.get('/{*splat}', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'))
+app.get('/', (req, res) => {
+  res.json({ message: 'Student Sign In API is running' })
 })
 
 // ── 404 handler ───────────────────────────────────────────────────────────
